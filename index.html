@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+        function salvar(){
+            let form = document.getElementById("form-cadastro")
+            let nome = form.nome.value
+            let email = form.email.value
+            let senha = form.senha.value
+            if (nome.trim() == ""){
+                alert("Preencha o nome da planta")
+                return false
+            }
+            if (email.trim() == ""){
+                alert("Preencha a especie da planta")
+                return false
+            }
+            if (senha.trim() == ""){
+                alert("Preencha a altura da planta")
+                return false
+            }
+            alert("Planta cadastrada com sucesso!")
+        }
+
+    </script>
+</head>
+<body>
+    <form id="form-cadastro" onsubmit="return false">
+        <div class="linha">
+            <label>Nome da Planta</label> <!--label é oq descreve-->
+            <input type="text" name="nome" maxlength="40"  /> <!--input é oq preenche-->
+        </div>
+
+        <div class="linha">
+            <label>Espécie da planta</label>
+            <input type="text" name="email" maxlength="80" />
+        </div>
+
+        <div class="linha">
+            <label>Altura da Planta</label>
+            <input type="number" name="senha" maxlength="15" />
+        </div>
+        <input type="submit" name="enviar" value="Cadastrar" onclick="salvar()" /> 
+
+    </form>
+    
+    
+</body>
+</html>
